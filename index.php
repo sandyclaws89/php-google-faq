@@ -83,7 +83,7 @@
   
         ];
         ?>
-        <?php 
+    <?php 
         foreach ($question_arr as $question_key => $answer) {
             // foreach ($)?>
             <h1>
@@ -92,37 +92,31 @@
             <p>
                 <?php echo  $answer;?>
             </p>
-        <?php            
+            <?php            
             foreach ($answer as $sub_key => $sub_answer) { ?>
-            <p>
-                <?php echo $sub_key;?>
-            </p>
-            <?php  
-                foreach ($sub_answer as $sub_sub_key=> $sub_sub_answer) {?>
-                 <ol>
-                    <li>
-                        <?php echo $sub_sub_key;?>
-                        <ol type="a">
-                            <?php foreach ($sub_sub_answer as $sub_sub_value => $sub_sub_sub) {?>
-                                <li>
-                                    <?php echo $sub_sub_value . $sub_sub_sub;?>
-                                </li>
-                            };
-                        </ol>
-                    </li>
-                    <li>
-                        <?php echo $sub_sub_answer; ?>
-                    </li>
-                </ol>
-                
-                    <!-- // echo $sub_sub_key . $sub_sub_answer; -->
-                
-               
-                };
+                <p>
+                    <?php echo $sub_key;?>
+                </p>
+                <?php  
+                    foreach ($sub_answer as $sub_sub_key=> $sub_sub_answer) {?>
+                    <ol>
+                        <li>
+                            <?php echo $sub_sub_key;?>
 
+                                <?php foreach ($sub_sub_answer as $sub_sub_value => $sub_sub_sub) {?>
+                                    <ol type="a">
+                                        <li>
+                                            <?php echo $sub_sub_value . $sub_sub_sub;?>
+                                        </li>
+                                    </ol>
+                                };
+                        </li>
+                        <li>
+                            <?php echo $sub_sub_answer; ?>
+                        </li>
+                    </ol>
+                };
             };
-                
         };
-    
     </body>
 </html>
