@@ -87,10 +87,19 @@
 
         foreach ($question_arr as $question_key => $answer) {
             // foreach ($)
-            echo $question_key . $answer;            
-            foreach ($answer as $sub_question => $sub_answer) {
-                echo $sub_question . $sub_answer; 
+            echo $question_key . $answer;       
+            foreach ($answer as $sub_key => $sub_answer) {
+                echo $sub_key . $sub_answer; 
+                // var_dump($sub_answer);
+                foreach ($sub_answer as $sub_sub_key=> $sub_sub_answer) {
+                    echo $sub_sub_key . $sub_sub_answer;
+                };
+                foreach ($sub_sub_answer as $sub_sub_value => $sub_sub_sub) {
+                    echo $sub_sub_value . $sub_sub_sub;
+                }; 
             };
+                
+
             // foreach()
         }
     ?>
