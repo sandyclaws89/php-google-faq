@@ -84,8 +84,7 @@
         ];
         ?>
     <?php 
-        foreach ($question_arr as $question_key => $answer) {
-            // foreach ($)?>
+        foreach ($question_arr as $question_key => $answer) { ?>
             <h1>
                 <?php echo $question_key; ?>
             </h1>
@@ -109,14 +108,14 @@
                                             <?php echo $sub_sub_value . $sub_sub_sub;?>
                                         </li>
                                     </ol>
-                                };
+                                <?php } ?>;
                         </li>
                         <li>
                             <?php echo $sub_sub_answer; ?>
                         </li>
                     </ol>
-                };
-            };
-        };
+                <?php } ?>;
+            <?php } ?>;
+        <?php } ?>;
     </body>
 </html>
